@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap');
+
+.teachers-page-outer-container {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    background: linear-gradient(
+        to right bottom,
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, .4)
+    );
+    z-index: 400;
+}
+
+
+.teachers-page-inner-container {}
+
+.teachers-hero-outer-container {}
+
+.teachers-hero-inner-container {
+    display: flex;
+
+}
+
+.teachers-hero-calling {
+    font-size: 4rem;
+    margin-top: 5rem;
+    line-height: 1.35;
+    margin-bottom: 1.35rem;
+}
+
+.teachers-hero-statement {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.075rem;
+    max-width: 50%;
+    line-height: 1.8;
+    letter-spacing: .7px;
+}
+
+.teachers-hero-add-form {
+    margin-top: 5rem;
+    padding: 1rem;
+    border-radius: 6px;
+    height: fit-content;
+
+    background-color: lightblue;
+}
+
+@media (min-width: 1080px) {
+    .teachers-hero-inner-container {
+        max-width: 80%;
+        margin: 0 auto;
+        min-height: 90vh;
+    }
+}
