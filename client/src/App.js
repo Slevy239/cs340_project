@@ -7,6 +7,9 @@ import { Header } from "./components/Header/Header";
 // PAGES
 import { Home } from './pages/Home/Home';
 import { Teachers } from "./pages/Teachers/Teachers";
+import { Students } from "./pages/Students/Students";
+import { Courses } from "./pages/Courses/Courses";
+import { BuildingsOnCampus } from "./pages/BuildingsOnCampus/BuildingsOnCampus";
 
 import './App.scss';
 
@@ -21,9 +24,9 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/teachers" element={<Teachers />} />
-                    {/* <Route path="/students" element={<Home />} /> */}
-                    {/* <Route path="/buildings-on-campus" element={<Home />} /> */}
-                    {/* <Route path="/courses" element={<Home />} /> */}
+                    <Route path="/students" element={<Students />} />
+                    <Route path="/buildings-on-campus" element={<BuildingsOnCampus />} />
+                    <Route path="/courses" element={<Courses />} />
                 </Routes>
             </BrowserRouter>
         </div>

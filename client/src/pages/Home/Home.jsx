@@ -1,3 +1,6 @@
+// IMAGES / ICONS / ILLUSTRATIONS
+import homePageIllustration from "../../images/illustrations/graduating.svg";
+
 // STYLES
 import "./styles/Home.scss";
 
@@ -18,6 +21,7 @@ const Home = () => {
                             Oregon State University.
                         </p>
                     </div>
+                    <img src={homePageIllustration} className="home-page-hero-illustration" />
                 </div>
             </div>
         </div>

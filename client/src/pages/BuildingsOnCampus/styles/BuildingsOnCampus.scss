@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap');
 
-h1 {
-    color: #d3322a;
-}
-
-.home-page-outer-container {
+.buildings-on-campus-page-outer-container {
     font-family: 'Playfair Display', serif;
     font-weight: bold;
     background: linear-gradient(
@@ -16,37 +12,42 @@ h1 {
 }
 
 
-.home-page-inner-container {}
+.buildings-on-campus-page-inner-container {}
 
-.home-hero-outer-container {}
+.buildings-on-campus-hero-outer-container {}
 
-.home-hero-inner-container {}
+.buildings-on-campus-hero-inner-container {
+    display: flex;
 
-.home-hero-calling {
+}
+
+.buildings-on-campus-hero-calling {
     font-size: 4rem;
     margin-top: 5rem;
     line-height: 1.35;
     margin-bottom: 1.35rem;
 }
 
-.home-hero-statement {
+.buildings-on-campus-hero-statement {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 1.075rem;
-    max-width: 50%;
+    max-width: 70%;
     line-height: 1.8;
     letter-spacing: .7px;
 }
 
-.home-page-hero-illustration {
-    position: absolute;
-    width: 80%;
-    top: 20vh;
-    right: -22vh;
+.buildings-on-campus-hero-add-form {
+    margin-top: 5rem;
+    padding: 1rem;
+    border-radius: 6px;
+    height: fit-content;
+
+    background-color: lightblue;
 }
 
 @media (min-width: 1080px) {
-    .home-hero-inner-container {
+    .buildings-on-campus-hero-inner-container {
         max-width: 80%;
         margin: 0 auto;
         min-height: 90vh;

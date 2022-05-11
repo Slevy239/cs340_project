@@ -1,3 +1,5 @@
+$color1: #d73f09;
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap');
 
 .teachers-page-outer-container {
@@ -32,18 +34,42 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 1.075rem;
-    max-width: 50%;
+    max-width: 60%;
     line-height: 1.8;
     letter-spacing: .7px;
 }
 
 .teachers-hero-add-form {
-    margin-top: 5rem;
+    margin-top: 7.5rem;
     padding: 1rem;
+    border-style: solid;
+    border-color: #373737;
+    border-width: 1px;
     border-radius: 6px;
     height: fit-content;
+}
 
-    background-color: lightblue;
+.teachers-hero-form-container {}
+
+.teachers-hero-form-container label {
+    color: $color1;
+}
+
+.teachers-hero-form-input {
+    margin-top: .35rem;
+    margin-bottom: 1.35rem;
+    padding: .35rem 0;
+}
+
+.teachers-hero-form-submit-btn {
+    width: 100%;
+    padding: .7rem 0;
+    font-weight: bold;
+    letter-spacing: .8px;
+    border: none;
+    border-radius: 6px;
+    background: $color1;
+    color: #fff;
 }
 
 @media (min-width: 1080px) {

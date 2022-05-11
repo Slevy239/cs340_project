@@ -20,9 +20,17 @@ const Teachers = () => {
                             </p>
                         </div>
                         <div className="teachers-hero-add-form">
-                            <form>
-                                <label>Professor</label>
-                                <input type="text" placeholder="Professor's name" />
+                            <form className="teachers-hero-form-container">
+                                <label>Professor</label><br />
+                                <input type="text" placeholder="Professor's name" className="teachers-hero-form-input" />
+
+                                <label>Professor</label><br />
+                                <input type="text" placeholder="Professor's name" className="teachers-hero-form-input" />
+
+                                <label>Professor</label><br />
+                                <input type="text" placeholder="Professor's name" className="teachers-hero-form-input" />
+
+                                <button type="submit" className="teachers-hero-form-submit-btn">Find Professors</button>
                             </form>
                         </div>
                     </div>
