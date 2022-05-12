@@ -1,3 +1,5 @@
+$color1: #d73f09;
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap');
 
 .courses-page-outer-container {
@@ -42,8 +44,97 @@
     padding: 1rem;
     border-radius: 6px;
     height: fit-content;
+}
 
-    background-color: lightblue;
+.course-hero-add-form-title {
+    color: $color1;
+}
+
+.course-hero-add-form-select {
+    margin: .35rem 0 2rem;
+    background-color: transparent;
+    border: none;
+}
+
+.course-hero-select-option {}
+
+.course-search-btn {
+    width: 100%;
+    padding: .5rem 0;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    color: #fff;
+    background-color: $color1;
+    letter-spacing: .8px;
+}
+
+.course-search-btn:hover {
+    cursor: pointer;
+}
+
+.available-courses-outer-container {
+    width: 100%;
+    // display: flex;
+    // justify-content: center;
+}
+
+.available-courses-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 3rem;
+}
+
+.available-courses-inner-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.available-course {
+    width: 45%;
+    margin-bottom: 3rem;
+    padding: 1.35rem;
+    border-radius: 9px;
+    // background: linear-gradient(
+    //     to right bottom,
+    //     rgba(215, 63, 9, .5),
+    //     rgba(215, 63, 9, .3)
+    // );
+    background-color: #fff;
+    box-shadow: #f0f0f9 1px 1px 15px;
+}
+
+.available-course:hover {
+    cursor: pointer;
+}
+
+.available-course-header {
+    text-align: center;
+    margin-bottom: 1.35rem;
+}
+
+.available-course-title {
+    font-size: 1.35rem;
+    margin-bottom: .35rem;
+    color: $color1;
+    font-weight: bold;
+}
+
+.available-course-department {
+    font-size: 1.1rem;
+}
+
+.course-description-container {}
+
+.course-description {
+    text-align: center;
+    font-size: .85rem;
+    font-family: 'Montserrat';
+    line-height: 1.6;
+    letter-spacing: .8;
 }
 
 @media (min-width: 1080px) {

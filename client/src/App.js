@@ -9,6 +9,7 @@ import { Home } from './pages/Home/Home';
 import { Teachers } from "./pages/Teachers/Teachers";
 import { Students } from "./pages/Students/Students";
 import { Courses } from "./pages/Courses/Courses";
+import { Course } from "./pages/Course/Course";
 import { BuildingsOnCampus } from "./pages/BuildingsOnCampus/BuildingsOnCampus";
 
 import './App.scss';
@@ -27,6 +28,7 @@ const App = () => {
                     <Route path="/students" element={<Students />} />
                     <Route path="/buildings-on-campus" element={<BuildingsOnCampus />} />
                     <Route path="/courses" element={<Courses />} />
+                    <Route path="/course/:courseTitle" element={<Course />} />
                 </Routes>
             </BrowserRouter>
         </div>
