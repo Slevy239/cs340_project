@@ -69,8 +69,8 @@ const Courses = () => {
                             courses !== null
                             ?
                             courses.map(course => (
-                                // <Link to={`/course/${course.courseTitle}`}>
-                                    <div key={course.courseID} className="available-course">
+                                <Link to={`/course/${course.courseTitle}`}  state={ { "courseTitle": course.courseTitle } } className="available-course">
+                                    <div key={course.courseID}>
                                         <div className="available-course-header">
                                             <p className="available-course-title">{course.courseTitle}</p>
                                             <p className="available-course-department">-{course.department}-</p>
@@ -79,7 +79,7 @@ const Courses = () => {
                                             <p className="course-description">{course.courseDescription}</p>
                                         </div>
                                     </div>
-                                // </Link>
+                                </Link>
                             ))
                             :
                             null

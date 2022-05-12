@@ -1,0 +1,102 @@
+.course-outer-container {
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+.course-inner-container {
+  width: 80%;
+  margin: 5rem auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.course-overview-container {
+  width: 50%;
+}
+
+.course-title {
+  color: #d73f09;
+  font-size: 2rem;
+  margin-bottom: .35rem;
+  max-width: 100%;
+}
+
+.course-teacher {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.course-description {
+  text-align: left;
+}
+
+.course-action {
+  width: 50%;
+  padding: 0 3rem;
+}
+
+.course-action-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.course-action-option {
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  font-weight: bold;
+}
+
+.course-action-option-active {
+  background-color: #d73f09;
+  color: #ffffff;
+}
+
+.course-update-label {
+  color: #d73f09;
+  margin-bottom: .35rem;
+}
+
+.course-update-input {
+  background-color: transparent;
+  border: none;
+  border-bottom-style: solid;
+  border-bottom-color: #d73f09;
+  border-bottom-width: 1px;
+  padding: .35rem 0;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.course-update-dropdown {
+  background-color: transparent;
+  border: none;
+  margin-top: .35rem;
+  margin-bottom: 1.5rem;
+}
+
+.course-update-textarea {
+  width: 100%;
+  min-height: 20vh;
+  border: none;
+  -webkit-box-shadow: #dedede 0px 0px 6px;
+          box-shadow: #dedede 0px 0px 6px;
+  padding: 6px;
+  margin: .7rem 0 1.5rem;
+  font-size: .75rem;
+  font-family: "Montserrat";
+}
+
+.course-update-btn {
+  width: 100%;
+  background-color: #d73f09;
+  color: #fff;
+  border: none;
+  font-size: 1.35rem;
+  font-weight: bold;
+  padding: 1rem 0;
+}
+/*# sourceMappingURL=Course.css.map */

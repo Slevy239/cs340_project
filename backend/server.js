@@ -77,18 +77,85 @@ cs340_project_server.get("/get-courses", (req, res) => {
 cs340_project_server.get("/course/:courseTitle", (req, res) => {
     DB.query(`
         SELECT 
+            Courses.courseID,
             Courses.courseTitle,
+            Courses.courseTeacher,
+            Courses.courseCapacity,
+            Courses.building,
+            Courses.courseDescription,
             Teachers.firstName AS instructorFirstName,
-            Teachers.lastName AS instructorLastName
+            Teachers.lastName AS instructorLastName,
+            Buildings.buildingName AS buildingName
         FROM Courses
         INNER JOIN Teachers
         ON Courses.courseTeacher = Teachers.teacherID
+        INNER JOIN Buildings
+        ON Courses.building = Buildings.buildingID
         WHERE courseTitle = "${req.params.courseTitle}";
         `, (err, result) => {
             if (err) {
             throw new Error(err);
         } else {
             console.log(result);
+            res.json(result);
+        }
+    });
+});
+
+cs340_project_server.put("/course/update", (req, res) => {
+    console.log("Inside /course/update");
+    let buildingID = null;
+    let courseTeacherID = null;
+    DB.query(`
+        SELECT Buildings.buildingID
+        FROM Buildings
+        WHERE buildingName = "${req.body.courseBuilding}"
+    `, (err, result) => {
+        if (err) {
+            throw new Error(err);
+        } else {
+            console.log("das hier -->", req.body);
+            let buildingID = result[0].buildingID;
+            DB.query(`
+                SELECT Teachers.teacherID
+                FROM Teachers
+                WHERE firstName = "${req.body.courseTeacher.split(" ")[0]}" AND lastName = "${req.body.courseTeacher.split(" ")[1]}";
+            `, (err, result) => {
+                if (err) {
+                    throw new Error(err);
+                } else {
+                    console.log("TEACHER ID:", result[0].teacherID);
+                    DB.query(`
+                    UPDATE Courses
+                    SET
+                        courseTitle = "${req.body.courseTitle}",
+                        courseTeacher = ${result[0].teacherID},
+                        courseDescription = "${req.body.courseDescription}",
+                        courseCapacity = ${parseInt(req.body.courseCapacity)},
+                        building = ${buildingID}
+                    WHERE courseID = ${parseInt(req.body.courseID)};
+                    `, (err, result) => {
+                        if (err) {
+                            throw new Error(err);
+                        } else {
+                            res.json({ "isSuccessful": true });
+                        };
+                    });
+                };
+            });
+        };
+    });
+});
+
+cs340_project_server.get("/teachers", (req, res) => {
+    console.log("Inside /teachers");
+    DB.query(`
+        SELECT * FROM Teachers;
+    `, (err, result) => {
+        if (err) {
+            throw new Error(err);
+        } else {
+            console.log("TEACHERS:\n", result);
             res.json(result);
         }
     });

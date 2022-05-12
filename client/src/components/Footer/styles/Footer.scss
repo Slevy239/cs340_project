@@ -1,0 +1,21 @@
+$color1: #d73f09;
+
+.footer-outer-container {
+    margin-top: 5rem;
+    background-color: $color1;
+    width: 100%;
+}
+
+.footer-inner-container {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.footer-statement {
+    color: #fff;
+    font-family: "Montserrat";
+    font-size: 1.35rem;
+    font-weight: bold;
+}

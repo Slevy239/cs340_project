@@ -24,21 +24,142 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 1.075rem;
-  max-width: 50%;
+  max-width: 60%;
   line-height: 1.8;
   letter-spacing: .7px;
 }
 
 .teachers-hero-add-form {
-  margin-top: 5rem;
+  margin-top: 7.5rem;
   padding: 1rem;
+  border-style: solid;
+  border-color: #373737;
+  border-width: 1px;
   border-radius: 6px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  background-color: lightblue;
 }
 
+.teachers-hero-form-container label {
+  color: #d73f09;
+}
+
+.teachers-select-element {
+  margin-top: .35rem;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  border: none;
+}
+
+.teachers-select-element:hover {
+  cursor: pointer;
+}
+
+.teachers-hero-form-input {
+  margin-top: .35rem;
+  margin-bottom: 1.35rem;
+  padding: .35rem 0;
+}
+
+.teachers-hero-form-submit-btn {
+  width: 100%;
+  padding: .7rem 0;
+  font-weight: bold;
+  letter-spacing: .8px;
+  border: none;
+  border-radius: 6px;
+  background: #d73f09;
+  color: #fff;
+}
+
+.teachers-hero-form-submit-btn:hover {
+  cursor: pointer;
+}
+
+.teachers-select-all-outer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2rem;
+}
+
+.teachers-select-all-inner-container {
+  width: 80%;
+}
+
+.teachers-display-all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.teachers-display-all::after {
+  content: "";
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+}
+
+.teachers-select-all-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #d73f09;
+}
+
+.teacher-display-instance {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 45%;
+  border-style: solid;
+  border-color: #d73f09;
+  border-width: 2px;
+  border-radius: 6px;
+  padding: 2.35rem 0;
+  margin-bottom: 2rem;
+}
+
+.teacher-name {
+  font-size: 1.5rem;
+  color: #d73f09;
+}
+
+.teacher-department {
+  font-size: 1rem;
+}
+
+/*
+.teacher-display-instance {
+    display: flex;
+    justify-content: space-between;
+    max-width: 40%;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: $color1;
+    padding-bottom: .35rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+*/
 @media (min-width: 1080px) {
   .teachers-hero-inner-container {
     max-width: 80%;

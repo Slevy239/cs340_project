@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap");
-h1 {
-  color: #d3322a;
-}
-
-.home-page-outer-container {
+.students-page-outer-container {
   font-family: 'Playfair Display', serif;
   font-weight: bold;
   background: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.4)));
@@ -11,34 +7,43 @@ h1 {
   z-index: 400;
 }
 
-.home-hero-calling {
+.students-hero-inner-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.students-hero-calling {
   font-size: 4rem;
   margin-top: 5rem;
   line-height: 1.35;
   margin-bottom: 1.35rem;
 }
 
-.home-hero-statement {
+.students-hero-statement {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 1.075rem;
-  max-width: 50%;
+  max-width: 60%;
   line-height: 1.8;
   letter-spacing: .7px;
 }
 
-.home-page-hero-illustration {
-  position: absolute;
-  width: 80%;
-  top: 20vh;
-  right: -22vh;
+.students-hero-add-form {
+  margin-top: 5rem;
+  padding: 1rem;
+  border-radius: 6px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: lightblue;
 }
 
 @media (min-width: 1080px) {
-  .home-hero-inner-container {
+  .students-hero-inner-container {
     max-width: 80%;
     margin: 0 auto;
     min-height: 90vh;
   }
 }
-/*# sourceMappingURL=Home.css.map */
+/*# sourceMappingURL=Students.css.map */

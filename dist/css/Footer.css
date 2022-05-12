@@ -1,0 +1,20 @@
+.footer-outer-container {
+  margin-top: 5rem;
+  background-color: #d73f09;
+  width: 100%;
+}
+
+.footer-inner-container {
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.footer-statement {
+  color: #fff;
+  font-family: "Montserrat";
+  font-size: 1.35rem;
+  font-weight: bold;
+}
+/*# sourceMappingURL=Footer.css.map */
