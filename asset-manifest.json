@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/cs340_project/static/css/main.e883da6d.css",
+    "main.js": "/cs340_project/static/js/main.eb55f3e4.js",
+    "static/media/osu_logo.png": "/cs340_project/static/media/osu_logo.939ff8029cde8407e553.png",
+    "static/media/graduating.svg": "/cs340_project/static/media/graduating.f5edd7d85413ea596614dafd692f32b8.svg",
+    "index.html": "/cs340_project/index.html",
+    "main.e883da6d.css.map": "/cs340_project/static/css/main.e883da6d.css.map",
+    "main.eb55f3e4.js.map": "/cs340_project/static/js/main.eb55f3e4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e883da6d.css",
+    "static/js/main.eb55f3e4.js"
+  ]
+}
