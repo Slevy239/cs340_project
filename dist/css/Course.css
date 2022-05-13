@@ -50,6 +50,10 @@
   font-weight: bold;
 }
 
+.course-action-option:hover {
+  cursor: pointer;
+}
+
 .course-action-option-active {
   background-color: #d73f09;
   color: #ffffff;
@@ -88,6 +92,7 @@
   margin: .7rem 0 1.5rem;
   font-size: .75rem;
   font-family: "Montserrat";
+  resize: none;
 }
 
 .course-update-btn {
@@ -98,5 +103,24 @@
   font-size: 1.35rem;
   font-weight: bold;
   padding: 1rem 0;
+}
+
+.course-update-btn:hover {
+  cursor: pointer;
+}
+
+.course-delete-btn {
+  background-color: #d73f09;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  font-size: 1.35rem;
+  padding: 1rem 0;
+  width: 100%;
+  margin: 1rem 0 0;
+}
+
+.course-delete-btn:hover {
+  cursor: pointer;
 }
 /*# sourceMappingURL=Course.css.map */

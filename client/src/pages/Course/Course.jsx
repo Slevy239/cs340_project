@@ -78,7 +78,29 @@ const Course = () => {
             })
         })
             .then(result => result.json())
-            .then(haris => console.log(haris));
+            .then(data => {
+                console.log("HERE IS DAS DATA...:", data);
+                console.log("ORIGINAL COURSE DATA -->", course);
+                setCourseTitle(data.courseTitle);
+                setCourseTeacher(data.courseTeacher);
+                setCourseTeacherID(data.teacherID);
+                setCourseBuilding(data.courseBuilding);
+                setCourseCapacity(data.courseCapacity);
+                setCourseDescription(data.courseDescription);
+                setCourseID(data.courseID);
+
+                setCourse([{
+                    "buildingName": data.courseBuilding,
+                    "courseCapacity": data.courseCapacity,
+                    "courseDescription": data.courseDescription,
+                    "courseID": data.courseID,
+                    "instructorFirstName": data.courseTeacher.split(" ")[0],
+                    "instructorLastName": data.courseTeacher.split(" ")[1],
+                    "courseTitle": data.courseTitle,
+                    "courseTeacher": data.teacherID,
+                    "building": data.buildingID
+                }]);
+            });
     };
 
     return (
@@ -170,7 +192,13 @@ const Course = () => {
                         </div>
                         : selectedAction === "delete"
                         ?
-                        <h1>DELETE</h1>
+                        <div className="course-delete-container">
+                            <p className="course-delete-warning">
+                                Deleting the course will delete it forever. Are you sure
+                                you want to do this?
+                            </p>
+                            <button className="course-delete-btn">Yes, Delete Course Forever</button>
+                        </div>
                         :
                         null
                     }

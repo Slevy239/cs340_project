@@ -39,6 +39,49 @@
   background-color: lightblue;
 }
 
+.students-list-inner-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.students-list-title {
+  color: #d73f09;
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.students-list-collection {
+  width: 60%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.student {
+  width: 45%;
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 3rem;
+  -webkit-box-shadow: #f0f0f9 1px 1px 15px;
+          box-shadow: #f0f0f9 1px 1px 15px;
+}
+
+.student:hover {
+  cursor: pointer;
+}
+
+.student-name {
+  color: #d73f09;
+  font-size: 1.35rem;
+}
+
 @media (min-width: 1080px) {
   .students-hero-inner-container {
     max-width: 80%;

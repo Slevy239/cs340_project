@@ -138,7 +138,8 @@ cs340_project_server.put("/course/update", (req, res) => {
                         if (err) {
                             throw new Error(err);
                         } else {
-                            res.json({ "isSuccessful": true });
+                            req.body.buildingID = buildingID;
+                            res.json(req.body);
                         };
                     });
                 };
@@ -158,6 +159,31 @@ cs340_project_server.get("/teachers", (req, res) => {
             console.log("TEACHERS:\n", result);
             res.json(result);
         }
+    });
+});
+
+cs340_project_server.get("/buildings-on-campus", (req, res) => {
+    DB.query(`
+        SELECT * FROM Buildings;
+    `, (err, result) => {
+        if (err) {
+            throw new Error(err);
+        } else {
+            res.json(result);
+        };
+    });
+});
+
+cs340_project_server.get("/students", (req, res) => {
+    DB.query(`
+        SELECT * FROM Students;
+    `, (err, result) => {
+        if (err) {
+            throw new Error(err);
+        } else {
+            console.log(result);
+            res.json(result);
+        };
     });
 });
 

@@ -1,3 +1,5 @@
+$color1: #d73f09;
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap');
 
 .students-page-outer-container {
@@ -45,6 +47,47 @@
 
     background-color: lightblue;
 }
+
+.students-list-outer-container {}
+
+.students-list-inner-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.students-list-title {
+    color: $color1;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.students-list-collection {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.student {
+    width: 45%;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 3rem;
+    box-shadow: #f0f0f9 1px 1px 15px;
+}
+
+.student:hover {
+    cursor: pointer;
+}
+
+.student-name {
+    color: $color1;
+    font-size: 1.35rem;
+}
+
+.student-major {}
 
 @media (min-width: 1080px) {
     .students-hero-inner-container {
