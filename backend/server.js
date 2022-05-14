@@ -5,13 +5,50 @@ const bodyParser = require("body-parser");
 require("dotenv").config();
 
 const PORT = process.env.PORT || 3000;
+
 const cs340_project_server = express();
+// const DB = mysql.createConnection({
+//     user: "root",
+//     host: "localhost",
+//     password: "h1h2h3h4h5",
+//     database: "oregonizer"
+// });
+
 const DB = mysql.createConnection({
-    user: "root",
-    host: "localhost",
+    user: "admin",
+    host: "database-1.ckxyrptrmw9b.us-west-1.rds.amazonaws.com",
+    port: "3306",
     password: "h1h2h3h4h5",
     database: "oregonizer"
 });
+
+cs340_project_server.use((req, res, next) => {
+    console.log("hello");
+    next();
+});
+
+// cs340_project_server.use(() => {
+//     DB.query(`
+//         SHOW TABLES;
+//     `, (err, result) => {
+//         if (err) {
+//             console.log(err);
+//             return;
+//         } else {
+//             console.log(result);
+//             return;
+//         }
+//     });
+// })
+
+// DB.connect(err => {
+//     if (err) { 
+//         console.log("DATABSE CONNECTION ERROR:,", err);
+//         return;
+//     }
+//     console.log("Connected to AMAZON RDS!");
+//     return;
+// });
 
 cs340_project_server.use(cors());
 
@@ -61,7 +98,7 @@ cs340_project_server.get("/get-courses", (req, res) => {
             Buildings.buildingName
         FROM Courses
         INNER JOIN Teachers
-        ON Courses.courseID = Teachers.teacherID
+        ON Courses.courseTeacher = Teachers.teacherID
         INNER JOIN Buildings
         ON Courses.building = Buildings.buildingID;
     `, (err, result) => {
@@ -73,6 +110,33 @@ cs340_project_server.get("/get-courses", (req, res) => {
         }
     });
 });
+
+// const getCourses = () => {
+//     DB.query(`
+//         SELECT 
+//             Courses.courseID,
+//             Courses.courseTitle, 
+//             Courses.courseCapacity,
+//             Courses.courseDescription,
+//             Teachers.firstName AS teacherFirstName, 
+//             Teachers.lastName AS teacherLastName, 
+//             Teachers.department, 
+//             Buildings.buildingName
+//         FROM Courses
+//         INNER JOIN Teachers
+//         ON Courses.courseID = Teachers.teacherID
+//         INNER JOIN Buildings
+//         ON Courses.building = Buildings.buildingID;
+//     `, (err, result) => {
+//         if (err) {
+//             throw new Error(err);
+//         } else {
+//             console.log(result);
+//             res.json(result);
+//         }
+//     });
+// };
+
 
 cs340_project_server.get("/course/:courseTitle", (req, res) => {
     DB.query(`
