@@ -12,7 +12,7 @@ const BuildingsOnCampus = () => {
 
     useEffect(() => {
         // fetch("http://localhost:3450/buildings-on-campus", { method: "GET" })
-        fetch("/buildings-on-campus/", { method: "GET" })
+        fetch("/api/buildings-on-campus/", { method: "GET" })
             .then(response => response.json())
             .then(data => {
                 console.log("BUILDINGS ON CAMPUS:\n",data);

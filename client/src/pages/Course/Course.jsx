@@ -31,7 +31,7 @@ const Course = () => {
 
     useEffect(() => {
         // fetch("http://localhost:3450/teachers", { method: "GET" })
-        fetch("/teachers/", { method: "GET" })
+        fetch("/api/teachers/", { method: "GET" })
             .then(response => response.json())
             .then(teachers => {
                 console.log("TEACHERS:", teachers)
@@ -41,7 +41,7 @@ const Course = () => {
 
     useEffect(() => {
         // fetch(`http://localhost:3450/course/${data.courseTitle}`, {
-        fetch(`/course/${data.courseTitle}/`, {
+        fetch(`/api/course/${data.courseTitle}/`, {
             method: "GET"
         })
             .then(response => response.json())
@@ -65,7 +65,7 @@ const Course = () => {
     const handleUpdate = (updateFormEvent) => {
         updateFormEvent.preventDefault();
         // fetch("http://localhost:3450/course/update", {
-        fetch("/course/update/", {
+        fetch("/api/course/update/", {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"

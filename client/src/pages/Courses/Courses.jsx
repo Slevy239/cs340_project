@@ -14,7 +14,7 @@ const Courses = () => {
 
     useEffect(() => {
         // fetch("http://localhost:3450/get-courses", {
-        fetch("/get-courses/", {
+        fetch("/api/get-courses/", {
             method: "GET"
         })
             .then(response => response.json())

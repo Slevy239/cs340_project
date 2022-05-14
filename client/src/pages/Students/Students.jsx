@@ -12,7 +12,7 @@ const Students = () => {
 
     useEffect(() => {
         // fetch("http://localhost:3450/students", { method: "GET" })
-        fetch("/students/", { method: "GET" })
+        fetch("/api/students/", { method: "GET" })
             .then(response => response.json())
             .then(data => {
                 console.log(data);

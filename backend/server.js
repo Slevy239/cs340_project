@@ -69,7 +69,7 @@ cs340_project_server.use(bodyParser.urlencoded({ extended: true }));
 //     }
 // });
 
-cs340_project_server.get("/get-teachers", (req, res) => {
+cs340_project_server.get("/api/get-teachers/", (req, res) => {
     DB.query(`
         SELECT * FROM Teachers;
     `, (err, result) => {
@@ -84,7 +84,7 @@ cs340_project_server.get("/get-teachers", (req, res) => {
     });
 });
 
-cs340_project_server.get("/get-courses", (req, res) => {
+cs340_project_server.get("/api/get-courses", (req, res) => {
     console.log("Inside /get-courses");
     DB.query(`
         SELECT 
@@ -138,7 +138,7 @@ cs340_project_server.get("/get-courses", (req, res) => {
 // };
 
 
-cs340_project_server.get("/course/:courseTitle", (req, res) => {
+cs340_project_server.get("/api/course/:courseTitle", (req, res) => {
     DB.query(`
         SELECT 
             Courses.courseID,
@@ -166,7 +166,7 @@ cs340_project_server.get("/course/:courseTitle", (req, res) => {
     });
 });
 
-cs340_project_server.put("/course/update", (req, res) => {
+cs340_project_server.put("/api/course/update", (req, res) => {
     console.log("Inside /course/update");
     let buildingID = null;
     let courseTeacherID = null;
@@ -212,7 +212,7 @@ cs340_project_server.put("/course/update", (req, res) => {
     });
 });
 
-cs340_project_server.get("/teachers", (req, res) => {
+cs340_project_server.get("/api/teachers", (req, res) => {
     console.log("Inside /teachers");
     DB.query(`
         SELECT * FROM Teachers;
@@ -226,7 +226,7 @@ cs340_project_server.get("/teachers", (req, res) => {
     });
 });
 
-cs340_project_server.get("/buildings-on-campus", (req, res) => {
+cs340_project_server.get("/api/buildings-on-campus", (req, res) => {
     DB.query(`
         SELECT * FROM Buildings;
     `, (err, result) => {
@@ -238,7 +238,7 @@ cs340_project_server.get("/buildings-on-campus", (req, res) => {
     });
 });
 
-cs340_project_server.get("/students", (req, res) => {
+cs340_project_server.get("/api/students", (req, res) => {
     DB.query(`
         SELECT * FROM Students;
     `, (err, result) => {

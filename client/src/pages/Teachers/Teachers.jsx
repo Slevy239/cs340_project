@@ -13,7 +13,7 @@ const Teachers = () => {
 
     useEffect(() => {
         // fetch("http://localhost:3450/get-teachers", {
-        fetch("/get-teachers/", {
+        fetch("/api/get-teachers/", {
             method: "GET"
         })
             .then(response => response.json())
