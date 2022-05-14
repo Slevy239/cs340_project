@@ -15,11 +15,11 @@ const cs340_project_server = express();
 // });
 
 const DB = mysql.createConnection({
-    user: "admin",
-    host: "database-1.ckxyrptrmw9b.us-west-1.rds.amazonaws.com",
-    port: "3306",
-    password: "h1h2h3h4h5",
-    database: "oregonizer"
+    user: process.env.user,
+    host: process.env.host,
+    port: process.env.asw_port,
+    password: process.env.password,
+    database: process.env.database
 });
 
 cs340_project_server.use((req, res, next) => {
