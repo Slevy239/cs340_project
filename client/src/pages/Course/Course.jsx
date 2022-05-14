@@ -30,7 +30,8 @@ const Course = () => {
     console.log(data.courseTitle);
 
     useEffect(() => {
-        fetch("http://localhost:3450/teachers", { method: "GET" })
+        // fetch("http://localhost:3450/teachers", { method: "GET" })
+        fetch("/teachers/", { method: "GET" })
             .then(response => response.json())
             .then(teachers => {
                 console.log("TEACHERS:", teachers)
@@ -39,7 +40,8 @@ const Course = () => {
     }, []);
 
     useEffect(() => {
-        fetch(`http://localhost:3450/course/${data.courseTitle}`, {
+        // fetch(`http://localhost:3450/course/${data.courseTitle}`, {
+        fetch(`/course/${data.courseTitle}/`, {
             method: "GET"
         })
             .then(response => response.json())
@@ -62,7 +64,8 @@ const Course = () => {
 
     const handleUpdate = (updateFormEvent) => {
         updateFormEvent.preventDefault();
-        fetch("http://localhost:3450/course/update", {
+        // fetch("http://localhost:3450/course/update", {
+        fetch("/course/update/", {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"

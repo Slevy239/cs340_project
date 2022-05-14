@@ -13,7 +13,8 @@ const Courses = () => {
     const [selectedCourse, setSelectedCourse] = useState("");
 
     useEffect(() => {
-        fetch("http://localhost:3450/get-courses", {
+        // fetch("http://localhost:3450/get-courses", {
+        fetch("/get-courses/", {
             method: "GET"
         })
             .then(response => response.json())
