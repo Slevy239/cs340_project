@@ -14,8 +14,13 @@ const Courses = () => {
 
     useEffect(() => {
         // fetch("http://localhost:3450/get-courses", {
+        // fetch("http://localhost:3450/api/get-courses", {
         fetch("/api/get-courses/", {
-            method: "GET"
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            }
         })
             .then(response => response.json())
             .then(data => {
