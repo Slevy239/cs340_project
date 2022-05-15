@@ -4,7 +4,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 require("dotenv").config();
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3450;
 
 const cs340_project_server = express();
 // const DB = mysql.createConnection({
