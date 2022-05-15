@@ -12,8 +12,8 @@ const Teachers = () => {
     const [selectedTeacher, setSelectedTeacher] = useState("");
 
     useEffect(() => {
-        // fetch("http://localhost:3450/get-teachers", {
-        fetch("/api/get-teachers/", {
+        fetch("http://localhost:3450/api/get-teachers", {
+        // fetch("/api/get-teachers/", {
             method: "GET"
         })
             .then(response => response.json())
