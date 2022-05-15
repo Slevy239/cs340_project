@@ -17,7 +17,7 @@ const cs340_project_server = express();
 const DB = mysql.createConnection({
     user: process.env.user,
     host: process.env.host,
-    port: process.env.asw_port,
+    port: process.env.aws_port,
     password: process.env.password,
     database: process.env.database
 });
