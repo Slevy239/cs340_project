@@ -23,8 +23,8 @@ const Teachers = () => {
 
 
     useEffect(() => {
-        fetch("http://localhost:3450/api/get-teachers", {
-            // fetch("/api/get-teachers/", {
+        // fetch("http://localhost:3450/api/get-teachers", {
+        fetch("/api/get-teachers/", {
             method: "GET"
         })
             .then(response => response.json())
@@ -44,7 +44,7 @@ const Teachers = () => {
         return 0;
     };
     const deleteTeacher = (id) => {
-        
+
         // fetch("http://localhost:3450/api/delete-teacher/" + id, {
         //     method: 'DELETE'
         // })
@@ -53,9 +53,10 @@ const Teachers = () => {
         //         console.log('asdasdasdasd')
         //     })
         //     .catch(err => console.log(err));
-        axios.get('http://localhost:3450/api/delete-teacher/'+id)
-        .then(console.log('Deleted'))
-        .catch(err => console.log(err))
+        // axios.get('http://localhost:3450/api/delete-teacher/'+id)
+        axios.get('/api/delete-teacher/' + id)
+            .then(console.log('Deleted'))
+            .catch(err => console.log(err))
 
     };
 

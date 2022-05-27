@@ -11,8 +11,8 @@ const Students = () => {
     const [students, setStudents] = useState(null);
 
     useEffect(() => {
-        fetch("http://localhost:3450/api/students", { method: "GET" })
-        // fetch("/api/students/", { method: "GET" })
+        // fetch("http://localhost:3450/api/students", { method: "GET" })
+        fetch("/api/students/", { method: "GET" })
             .then(response => response.json())
             .then(data => {
                 console.log(data);
