@@ -174,6 +174,21 @@ cs340_project_server.get("/api/course/:courseTitle", (req, res) => {
     });
 });
 
+cs340_project_server.put("/api/update-teacher/:id", (req, result) => {
+    console.log(req.body.teacherID, 'asdf')
+    console.log(req.params.id, 'id')
+    DB.query(`UPDATE Teachers
+    set firstName = "${req.body.firstName}", lastName = "${req.body.lastName}", department = "${req.body.department}"
+    where teacherID = ${req.params.id} `, (err, res) => {
+        if (err) {
+            throw Error(err);
+        } else {
+            // res.json(result)
+            console.log("Success")
+        }
+    })
+})
+
 cs340_project_server.put("/api/course/update", (req, res) => {
     console.log("Inside /course/update");
     let buildingID = null;
