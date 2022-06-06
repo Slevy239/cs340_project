@@ -1,4 +1,5 @@
 // CORE
+
 import * as React from "react";
 import axios from 'axios'
 
@@ -37,6 +38,7 @@ const Teachers = () => {
 
 
 
+
     const style = {
         position: 'absolute',
         top: '50%',
@@ -65,6 +67,8 @@ const Teachers = () => {
         const index = selectEvent.target.selectedIndex;
         const el = selectEvent.target.childNodes[index]
         const option = el.getAttribute('id');
+      
+        setSelectedTeacher(selectEvent.target.value);
 
         return 0;
     };
@@ -156,9 +160,11 @@ return (
                             </select>
                             {/* <input type="text" placeholder="Professor's name" className="teachers-hero-form-input" /> */}
 
+
                             <button type="submit" className="teachers-hero-form-submit-btn">Find Professors</button>
                         </form>
                     </div>
+
                 </div>
                 <div className="teachers-select-all-outer-container">
                     <div className="teachers-select-all-inner-container">

@@ -35,6 +35,30 @@ const Courses = () => {
         return 0;
     };
 
+    const handleDeleteCourse = (courseID) => {
+        console.log("courseID:", courseID);
+        // fetch(`http://localhost:3450/api/course/delete/${courseID}`, {
+        fetch(`/api/course/delete/${courseID}`, {
+            method: "DELETE"
+        })
+            .then(response => {
+                // fetch("http://localhost:3450/api/get-courses", {
+                    fetch("/api/get-courses/", {
+                        method: "GET",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "Accept": "application/json"
+                        }
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log(data);
+                            setCourses(data);
+                            setSelectedCourse(data[0].courseTitle);
+                        });
+            })
+    }
+
     return (
         <div className="courses-page-outer-container">
             <div className="courses-page-inner-container">
@@ -48,7 +72,7 @@ const Courses = () => {
                                 for the courses you're interested in.
                             </p>
                         </div>
-                        <div className="courses-hero-add-form">
+                        {/* <div className="courses-hero-add-form">
                             <form>
                                 <label className="course-hero-add-form-title">Courses</label>
                                 <select value={selectedCourse} onChange={handleCourseSelection} className="course-hero-add-form-select">
@@ -65,10 +89,10 @@ const Courses = () => {
                             <Link to={`/course/${selectedCourse}`} state={ { "courseTitle": selectedCourse } }>
                                     <button className="course-search-btn">Lookup Course</button>
                             </Link>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
-                <div className="available-courses-outer-container">
+                {/* <div className="available-courses-outer-container">
                     <h1 className="available-courses-title">Courses</h1>
                     <div className="available-courses-inner-container">
                         {
@@ -89,6 +113,32 @@ const Courses = () => {
                             ))
                             :
                             null
+                        }
+                    </div>
+                </div> */}
+                <div className="courses-list-outer-container">
+                    <div className="courses-list-inner-container">
+                        <p className="courses-list-title">Courses</p>
+                        <div className="courses-list-columns">
+                            <p className="courses-list-column-course-title">Course Title</p>
+                            <p className="courses-list-column-course-professor">Professor</p>
+                            <p className="courses-list-column-course-department">Department</p>
+                            <p className="courses-list-column-course-options">Options</p>
+                        </div>
+                        {
+                            courses === null
+                            ? null
+                            : courses.map(course => (
+                                <div className="courses-list-course">
+                                    <Link to={`/course/${course.courseTitle}`} state={{ "courseTitle": course.courseTitle }} className="courses-list-course-title">
+                                        <h1>{course.courseTitle}</h1>
+                                    </Link>
+                                    <p className="courses-list-course-professor">{course.teacherFirstName} {course.teacherLastName}</p>
+                                    <p className="courses-list-course-departent">{course.department}</p>
+                                    <Link to={`/course/edit/${course.courseTitle}`} state={{ "courseID": course.courseID }} className="courses-list-edit-course">Edit</Link>
+                                    <p className="courses-list-delete-course" onClick={() => handleDeleteCourse(course.courseID)}>Delete</p>
+                                </div>
+                            ))
                         }
                     </div>
                 </div>
