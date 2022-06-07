@@ -1,4 +1,5 @@
 // CORE
+
 import * as React from "react";
 import axios from 'axios'
 
@@ -40,6 +41,7 @@ const Teachers = () => {
 
 
 
+
     const style = {
         position: 'absolute',
         top: '50%',
@@ -68,6 +70,8 @@ const Teachers = () => {
         const index = selectEvent.target.selectedIndex;
         const el = selectEvent.target.childNodes[index]
         const option = el.getAttribute('id');
+      
+        setSelectedTeacher(selectEvent.target.value);
 
         return 0;
     };

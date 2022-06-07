@@ -147,3 +147,67 @@ $color1: #d73f09;
         min-height: 90vh;
     }
 }
+
+.courses-list-outer-container {}
+
+.courses-list-inner-container {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.courses-list-title {
+    font-size: 3rem;
+    color: #d73f09;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.courses-list-columns {
+    display: flex;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.courses-list-column-course-title,
+.courses-list-column-course-professor,
+.courses-list-column-course-department,
+.courses-list-column-course-options {
+    color: #d73f09;
+    font-weight: bold;
+    font-size: 1.35rem;
+    width: 10rem;
+    margin-right: 3rem;
+    text-align: center;
+}
+
+.courses-list-column-course-options {
+    margin-right: 0;
+}
+
+.courses-list-course {
+    display: flex;
+    width: fit-content;
+    margin: 2rem auto;
+}
+
+.courses-list-course-title,
+.courses-list-course-professor,
+.courses-list-course-departent {
+    width: 10rem;
+    margin-right: 3rem;
+}
+
+.courses-list-course-title {}
+
+.courses-list-course-professor {}
+
+.courses-list-course-departent {}
+
+.courses-list-edit-course {
+    color: #4267B2;
+    margin-right: 1rem;
+}
+
+.courses-list-delete-course {
+    color: #d73f09;
+}
